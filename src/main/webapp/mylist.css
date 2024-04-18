@@ -74,6 +74,22 @@
     width: 100px;
 }
 
-
+.nav{
+    border: dotted blue;
+    display: flex;
+    flex-direction: column;
+}
+.nav_logo{
+    width: 100px;
+}
+.search_icon{
+    width: 20px;
+}
+.nav_perfil{
+    width: 100px;
+}
+.search_avatar{
+    display: flex;
+}
 
 

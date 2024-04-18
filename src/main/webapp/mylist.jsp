@@ -42,7 +42,8 @@
     <ul>
         <% String[] favoritos = new ConsultasBancoDeDados().showFavoritos((String) session.getAttribute("email"));
             if (favoritos != null && favoritos.length > 0) {
-                for (String favorito : favoritos) { %>
+                for (String favorito : favoritos) {
+                    if (favorito != null && !favorito.isEmpty()) { %>
         <li>
             <img src="<%= favorito %>" alt="Movie Poster" class="movie-poster">
             <form action="MyListServlet" method="post">
@@ -52,6 +53,7 @@
             </form>
         </li>
         <% }
+        }
         } else { %>
         <li>No movies added to your list yet.</li>
         <% } %>
