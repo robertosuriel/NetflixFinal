@@ -55,6 +55,19 @@ public class SignUpServlet extends HttpServlet {
                     System.out.println("Inserindo dados no banco de dados...");
                     if (rowsInserted > 0) {
                         System.out.println("Um novo usuário foi inserido com sucesso.");
+
+                        // Executar a instrução SQL para inserção na tabela de favoritos
+                        String sqlFavoritos = "INSERT INTO favoritos (email,urls) VALUES (?,',')";
+                        try (PreparedStatement statementFavoritos = connection.prepareStatement(sqlFavoritos)) {
+                            statementFavoritos.setString(1, email);
+
+                            // Executar a instrução SQL para inserção na tabela de favoritos
+                            int rowsInsertedFavoritos = statementFavoritos.executeUpdate();
+                            System.out.println("Inserindo dados na tabela de favoritos...");
+                            if (rowsInsertedFavoritos > 0) {
+                                System.out.println("O email foi adicionado aos favoritos com sucesso.");
+                            }
+                        }
                     }
                 }
             }
@@ -64,5 +77,4 @@ public class SignUpServlet extends HttpServlet {
 
         // Redirecionar o usuário para uma nova página após processar o formulário
         response.sendRedirect("signin.jsp");
-    }
-}
+    }}
