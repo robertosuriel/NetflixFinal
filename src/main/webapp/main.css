@@ -108,3 +108,14 @@ body{
 .nav_black{
     background-color: #111;
 }
+.sessao{
+    background-color: grey;
+}
+
+.header_icons{
+    display: flex;
+    justify-content: space-around;
+}
+.search_icon{
+    width: 20px;
+}

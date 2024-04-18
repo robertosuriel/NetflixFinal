@@ -17,7 +17,11 @@
 
 <div class="nav" id="nav">
     <img src="images/netflix-logo.png" alt="" class="nav_logo">
-    <img src="images/netflix-avatar.png" alt="" class="nav_avatar">
+    <div class = "header_icons">
+        <div class = "sessao"><span> <%= session.getAttribute("email") %></span></div>
+        <img src="images/lupa.png" alt="Search_Icon" class="search_icon" id="search_icon">
+        <img src="images/netflix-avatar.png" alt="" class="nav_avatar">
+    </div>
 </div>
 
 
@@ -27,7 +31,7 @@
         <h1 class="banner_title">Money Heist</h1>
         <div class="banner_buttons">
             <button class="banner_button">Play</button>
-            <button class="banner_button">My List</button>
+            <a href="mylist.jsp"><button class="banner_button">My List</button></a>
         </div>
         <div class="banner_des">
             To carry out the biggest heist in history, a mysterious man called The Professor recruits

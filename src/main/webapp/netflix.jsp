@@ -33,7 +33,7 @@
         <p>Ready to watch? Enter your email to create or restart your membership.</p>
         <form class="email-signup">
             <input type="email" placeholder="Email address" required>
-            <a href="/signup.jsp"><button type="submit">Get Started</button></a>
+            <a href="signup.jsp"><button type="submit">Get Started</button></a>
         </form>
     </div>
 </div>
