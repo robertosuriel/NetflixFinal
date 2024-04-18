@@ -21,7 +21,7 @@
 
 <body>
 <div class="banner">
-    <a href="main.html">
+    <a href="netflix.jsp">
         <img class="netflix" src="logoNetflix.png" alt="Netflix Logo">
     </a>
 </div>

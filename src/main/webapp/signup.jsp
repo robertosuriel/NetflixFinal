@@ -21,7 +21,7 @@
 
 <body>
 <div class="banner">
-    <a href="main.html">
+    <a href="netflix.jsp">
         <img class="netflix" src="logoNetflix.png" alt="Netflix Logo">
     </a>
 </div>
@@ -61,7 +61,7 @@
                     </div>
 
                     <div class="register-link">
-                        <p>New to Netflix? <a href="main.html">Sign up now</a></p>
+                        <p>New to Netflix? <a href="netflix.jsp">Sign up now</a></p>
 
                         <div class="register">
                             <p>This page is protected by Google reCAPTCHA to ensure you're not a bot.<a href="#">Learn more.</a></p>
