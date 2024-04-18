@@ -1,252 +1,78 @@
-*{
-    box-sizing: border-box;
-}
-body{
-    font-family:Arial, Helvetica, sans-serif ;
-    background-color: #111;
+/* mylist.css */
+
+/* Estilos para o layout de filmes */
+.movie-list {
+    margin-top: 20px; /* Adiciona um espaçamento superior */
+    padding: 0 20px; /* Adiciona um espaçamento interno */
 }
 
-
-.row{
+.movie-list h2 {
     color: white;
-    margin-left: 20px;
+    font-size: 24px;
+    margin-bottom: 10px; /* Adiciona um espaçamento inferior */
+}
+.movie-list .movie-poster {
+    width: 150px; /* Define a largura das imagens dos filmes */
+    margin-right: 20px; /* Espaçamento entre as imagens dos filmes */
+}
+
+/* Estilo para a lista de filmes */
+.movie-list ul {
+    list-style-type: none; /* Remove os marcadores de lista */
+    padding: 0;
+    margin: 0;
     display: flex;
-    flex-direction: column;
-
+    flex-wrap: wrap; /* Permitir que os filmes quebrem para a próxima linha */
+    justify-content: flex-start; /* Alinha os filmes à esquerda */
 }
-.row__posts{
-
-    display: inline-block;
-}
-.movie-container {
+.movie-list ul {
+    list-style-type: none; /* Remove os marcadores de lista */
+    padding: 0;
+    margin: 0;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap; /* Impede que os filmes quebrem para a próxima linha */
-    overflow-x: auto; /* Adiciona uma barra de rolagem horizontal se necessário */
-    overflow-y: hidden;
-    padding: 20px;
-
-}
-.movie-container::-webkit-scrollbar {
-    display: none;
+    flex-wrap: wrap; /* Permitir que os filmes quebrem para a próxima linha */
 }
 
-.movie {
-    position: relative; /* Permitir que o botão de favoritos seja posicionado */
-    margin-right: 10px; /* Espaçamento entre os filmes */
-    transition: transform 450ms; /* Adicionar transição para o efeito de escala */
+.movie-list li {
+    width: 200px; /* Define a largura dos itens da lista */
+    margin-right: 20px; /* Espaçamento entre os filmes */
+    margin-bottom: 20px; /* Espaçamento inferior entre os filmes */
 }
 
-.movie:hover {
-    transform: scale(1.08); /* Manter o aumento quando o cursor estiver sobre o filme */
+.movie-list img {
+    width: 100%; /* Para garantir que a imagem ocupe todo o espaço disponível */
+    height: auto; /* Para manter a proporção da imagem */
 }
-.add-to-favorites {
-    display: none; /* Ocultar o botão inicialmente */
-    position: absolute; /* Posicionar o botão sobre o filme */
-    bottom: 10px; /* Distância do botão ao fundo do filme */
+
+.movie-list form {
+    position: relative; /* Permitir que o botão seja posicionado */
+}
+
+.movie-list button {
+    position: absolute; /* Posicionar o botão sobre a imagem */
+    bottom: 5px; /* Distância do botão ao fundo da imagem */
     left: 50%; /* Alinhar o botão horizontalmente */
     transform: translateX(-50%); /* Centralizar o botão horizontalmente */
-    width: 40px; /* Define a largura do botão */
-    height: 40px; /* Define a altura do botão */
-    border-radius: 50%; /* Torna o botão redondo */
+    width: 80px; /* Define a largura do botão */
+    padding: 5px 10px; /* Adiciona um espaçamento interno */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Adiciona cantos arredondados */
     background-color: #ff0000; /* Cor de fundo do botão */
-    color: #ffffff; /* Cor do ícone */
-    font-size: 24px; /* Tamanho do ícone */
-    border: dotted red; /* Remove a borda */
+    color: white; /* Cor do texto do botão */
+    font-size: 14px; /* Tamanho da fonte do botão */
     cursor: pointer; /* Altera o cursor ao passar por cima */
-    z-index: 1;
-
+    opacity: 0; /* Inicialmente oculta o botão */
+    transition: opacity 0.3s; /* Adiciona uma transição suave */
 }
 
-.add-to-favorites::before {
-    content: "+"; /* Adiciona o símbolo de adição */
-}
-.movie:hover .add-to-favorites {
-    display: block; /* Mostrar o botão quando o mouse passa sobre o filme */
+.movie-list li:hover button {
+    opacity: 1; /* Mostra o botão quando o mouse passa sobre o filme */
 }
 
 
-.row__post{
-    max-height: 250px;
-    margin-right: 10px;
-    transition: transform 450ms;
+.img{
+    width: 100px;
 }
-
-.row__post:hover{
-    transform: scale(1.08);
-}
-
-.row_postL{
-    max-height: 250px;
-
-}
-.row_postL:hover{
-    transform: scale(1.10);
-}
-
-.banner{
-    background: url("images/banner\ \(1\).jpg");
-    background-size: cover;
-    background-position: center center;
-    color: #fff;
-    object-fit: contain;
-    height: 448px;
-
-}
-.banner__content{
-    margin-left: 30px;
-    padding-top: 140px;
-    height:190px ;
-}
-.banner_title{
-    font-size: 3rem;
-    font-weight: 800;
-    padding-bottom: 0.3rem;
-}
-.banner_des{
-    width: 45rem;
-    line-height: 1.3;
-    padding-top: 1rem;
-    font-size: 0.8rem;
-    max-width: 360px;
-    height: 180px;
-}
-.banner_button{
-    cursor: pointer;
-    color: #fff;
-    outline: none;
-    border: none;
-    font-weight: 700;
-    border-radius: 0.2vw;
-    padding-left: 2rem;
-    padding-right:2rem ;
-    margin-right: 1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    background-color: rgba(51, 51, 51, 0.5);
-
-}
-.banner_button:hover{
-    color: #111;
-    background-color: #e6e6e6;
-    transition: all 0.2s;
-}
-.banner--fadeBottom{
-    margin-top: 145px;
-    height: 7.4rem;
-    background-image: linear-gradient(180deg,transparent,rgba(37,37,37,0.61),#111);
-}
-
-.search_input {
-    display: none;
-}
-
-.search_input.show {
-    display: block;
-}
-
-
-.nav{
-    position: fixed;
-    top:0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    z-index: 1;
-    transition-timing-function:ease-in ;
-    transition: all 0.5s;
-
-}
-
-.nav_logo{
-    width: 80px;
-    object-fit: contain;
-}
-
-.search_avatar{
-    display: flex;
-    align-items: center;
-
-}
-.search_container{
-
-
-    margin-right: 10px;
-    margin-top: 7px;
-
-}
-.search_icon{
-    width: 20px;
-    margin-top: 7px;
-}
-
-.nav_perfil_wrapper {
-    position: relative;
-}
-.sessao{
-    background-color: white;
-}
-
-
-.nav_perfil_wrapper:hover .perfil_menu {
-    display: block;
-}
-
-.nav_avatar{
-    width: 30px;
-    object-fit: contain;
-}
-
-.nav_black{
-    background-color: #111;
-}
-
-
-
-
-
-
-.nav_perfil {
-    display: block;
-    width: 40px;
-    border-radius: 10%;
-    margin-right: 30px;
-
-
-}
-
-.perfil_menu {
-    display: none;
-    position: absolute;
-    background-color: black;
-    border: 1px solid gray;
-    padding: 5px 0;
-    list-style-type: none;
-    margin: 0;
-    width: 200px;
-    right: 30px;
-}
-
-.perfil_menu li {
-    padding: 10px;
-}
-
-.perfil_menu li a {
-    text-decoration: none;
-    color: white;
-    display: block;
-    text-align: center;
-}
-
-.perfil_menu li:hover {
-    background-color: #f0f0f023;
-}
-
-
-
-
-/* fim das alterações de header */
 
 
 

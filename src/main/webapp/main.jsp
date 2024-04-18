@@ -45,7 +45,7 @@
 <div class="row">
     <h2>NETFLIX ORIGINALS</h2>
     <div class="row__posts">
-        <img src="images/large-movie1.jpg" alt="" class="row__post row_postL">
+        <img src="images/large-movie1.jpg" alt="Luis Miguel" class="row__post row_postL">
         <img src="images/large-movie2.jpg" alt="" class="row__post row_postL">
         <img src="images/large-movie3.jpg" alt="" class="row__post row_postL">
         <img src="images/large-movie4.jpg" alt="" class="row__post row_postL">
@@ -237,6 +237,9 @@
             nav.classList.remove('nav_black')
         }
     })
+
+
+
 </script>
 
 
