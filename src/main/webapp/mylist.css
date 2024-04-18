@@ -1,16 +1,55 @@
-/* mylist.css */
-
 /* Estilos para o layout de filmes */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    color: #fff;
+}
+
+.nav{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.nav_logo{
+    width: 100px;
+
+}
+.search_icon{
+
+    width: 20px;
+}
+.nav_perfil{
+    width: 40px;
+}
+.search_avatar{
+    display: flex;
+
+    justify-content: space-between;
+}
+.movie-list{
+    display: flex;
+    flex-direction: column;
+}
+
 .movie-list {
     margin-top: 20px; /* Adiciona um espaçamento superior */
     padding: 0 20px; /* Adiciona um espaçamento interno */
 }
 
 .movie-list h2 {
-    color: white;
+    color: #fff; /* Cor do título dos filmes */
     font-size: 24px;
     margin-bottom: 10px; /* Adiciona um espaçamento inferior */
 }
+
 .movie-list .movie-poster {
     width: 150px; /* Define a largura das imagens dos filmes */
     margin-right: 20px; /* Espaçamento entre as imagens dos filmes */
@@ -24,13 +63,6 @@
     display: flex;
     flex-wrap: wrap; /* Permitir que os filmes quebrem para a próxima linha */
     justify-content: flex-start; /* Alinha os filmes à esquerda */
-}
-.movie-list ul {
-    list-style-type: none; /* Remove os marcadores de lista */
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap; /* Permitir que os filmes quebrem para a próxima linha */
 }
 
 .movie-list li {
@@ -57,8 +89,8 @@
     padding: 5px 10px; /* Adiciona um espaçamento interno */
     border: none; /* Remove a borda */
     border-radius: 5px; /* Adiciona cantos arredondados */
-    background-color: #ff0000; /* Cor de fundo do botão */
-    color: white; /* Cor do texto do botão */
+    background-color: #e50914; /* Cor de fundo do botão (vermelho Netflix) */
+    color: #fff; /* Cor do texto do botão */
     font-size: 14px; /* Tamanho da fonte do botão */
     cursor: pointer; /* Altera o cursor ao passar por cima */
     opacity: 0; /* Inicialmente oculta o botão */
@@ -69,27 +101,8 @@
     opacity: 1; /* Mostra o botão quando o mouse passa sobre o filme */
 }
 
-
-.img{
-    width: 100px;
+/* Estilos para a barra de navegação */
+/* Estilos para outras imagens */
+.img {
+    width: 100px; /* Largura das imagens */
 }
-
-.nav{
-    border: dotted blue;
-    display: flex;
-    flex-direction: column;
-}
-.nav_logo{
-    width: 100px;
-}
-.search_icon{
-    width: 20px;
-}
-.nav_perfil{
-    width: 100px;
-}
-.search_avatar{
-    display: flex;
-}
-
-
