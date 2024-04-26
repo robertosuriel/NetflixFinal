@@ -8,7 +8,7 @@ public class ConsultasBancoDeDados {
     private Connection connection;
     private final String url = "jdbc:mysql://localhost:3306/banco_de_usuarios";
     private String user = "root";
-    private String password = "$Uriel171217";
+    private String password = "";
 
     public ConsultasBancoDeDados() {
         try {
